@@ -13,10 +13,11 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      {/* basename é essencial para funcionar no GitHub Pages */}
+      <BrowserRouter basename="/paulo-bascope-portfolio-showcase-main/">
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          {/* ADICIONE OUTRAS ROTAS AQUI, ACIMA DO "*" */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
